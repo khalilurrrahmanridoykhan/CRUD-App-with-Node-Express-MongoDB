@@ -1,0 +1,59 @@
+<!-- Include header -->
+<%- include('include/_header') %>
+<!-- Include header -->
+
+<main>
+    <br>
+    <br>
+    <div class="container">
+        <div class="row">
+
+            <div class="col-md-12">
+            <a name="" id="" class="btn btn-primary" href="/" role="button">Back</a>
+            <h3 class="text-center">New User</h3>
+            <p class="text-center">Enter User info for Create a new user.</p>
+            <br>
+
+            <div class="container text-center">
+                <form action="/api/users" method="post" id="add_user" class="text-center">
+                    <div class="form-group  text-center">
+                        <label for="name" class="col-sm-1-12 col-form-label">Name</label>
+                        <div class="col-sm-1-12">
+                            <input type="text" class="form-control" name="name" id="name" placeholder="">
+                        </div>
+                    </div>
+                    <div class="form-group ">
+                        <label for="email" class="col-sm-1-12 col-form-label">Email</label>
+                        <div class="col-sm-1-12">
+                            <input type="email" class="form-control" name="email" id="email" placeholder="">
+                        </div>
+                    </div>
+                    <div class="form-group ">
+                        <label for="email" class="col-sm-1-12 col-form-label">Gender</label>
+                        <div class="col-sm-1-12">
+                            <input type="text" class="form-control" name="gender" id="gender" placeholder="">
+                        </div>
+                    </div>
+                    <div class="form-group ">
+                        <label for="email" class="col-sm-1-12 col-form-label">Status</label>
+                        <div class="col-sm-1-12">
+                            <input type="text" class="form-control" name="status" id="status" placeholder="">
+                        </div>
+                    </div>
+
+
+                    <div class="form-group ">
+                        <div class="">
+                            <button style="width: 100%;" type="submit" class="btn btn-primary">Save</button>
+                        </div>
+                    </div>
+                </form>
+            </div>
+            </div>
+        </div>
+    </div>
+</main>
+
+<!-- Include footer -->
+<%- include('include/_footer') %>
+<!-- Include footer -->

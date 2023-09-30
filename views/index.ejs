@@ -1,0 +1,62 @@
+<!-- Include header -->
+    <%- include('include/_header') %>
+<!-- Include header -->
+
+<main>
+    <br>
+    <br>
+    <div class="container">
+        <div class="row">
+            <br>
+            <br>
+            <div class="col-md-12">
+
+                <a name="" id="" class="btn btn-primary" href="/add_user" role="button">
+                    New User <i class="fa fa-user" aria-hidden="true"></i>
+                </a>
+            </div>
+        </div>
+    </div>
+
+
+    <div class="container">
+        <div class="row">
+            <table class="table">
+                <thead>
+                    <tr>
+                        <th>Id</th>
+                        <th>Name</th>
+                        <th>Email</th>
+                        <th>Gender</th>
+                        <th>Stutus</th>
+                        <th>Action</th>
+                    </tr>
+                </thead>
+                <tbody>
+
+                    <%for(var i=0; i<users.length; i++){%>
+                    <tr>
+                        <td scope="row"><%=i+1%></td>
+                        <td><%=users[i].name%></td>
+                        <td><%=users[i].email%></td>
+                        <td><%=users[i].gender%></td>
+                        <td><%=users[i].status%></td>
+                        <td>
+                            <a name="" id="" class="btn btn-warning" href="/update_user?id=<%=users[i]._id%>" role="button">
+                                <i class="fas fa-user-edit fa-xs fa-fw"></i>
+                            </a>
+                            <a name="" id="" class="btn btn-danger" href="#" role="button">
+                                <i class="fa-solid fa-xmark"></i>
+                            </a>
+                        </td>
+                    </tr>
+                    <%}%>
+                </tbody>
+            </table>
+        </div>
+    </div>
+</main>
+
+<!-- Include footer -->
+<%- include('include/_footer') %>
+<!-- Include footer -->
